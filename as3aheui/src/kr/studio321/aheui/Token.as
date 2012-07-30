@@ -30,8 +30,16 @@ package kr.studio321.aheui
 		public var vowel:int;
 		public var under:int;
 		
-		public function Token( initial:int, vowel:int, under:int )
+		public function Token(
+			code:String = "",
+			isNothing:Boolean = true,
+			initial:int=0,
+			vowel:int=0,
+			under:int=0
+		)
 		{
+			this.code = code;
+			this.isNothing = isNothing;
 			this.initial = initial;
 			this.vowel = vowel;
 			this.under = under;
