@@ -1,0 +1,7 @@
+bin
+bin-debug
+html-template
+.settings
+.actionScriptProperties
+.flexLibProperties
+.project
