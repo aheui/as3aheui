@@ -17,9 +17,10 @@ package kr.studio321.aheui
 				storage[ i ].length = 0;
 		}
 		
-		public function pop( id:int ):void
+		public function pop( id:int ):int
 		{
-			// TODO : 구현
+			return ( id == 21 )?
+				storage[ id ].shift() : storage[ id ].pop();
 		}
 		
 		public function push( id:int, value:int ):void
