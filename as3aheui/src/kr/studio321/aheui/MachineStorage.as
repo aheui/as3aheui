@@ -19,8 +19,10 @@ package kr.studio321.aheui
 		
 		public function pop( id:int ):int
 		{
-			return ( id == 21 )?
-				storage[ id ].shift() : storage[ id ].pop();
+			return (
+				( id == 21 )?
+				storage[ id ].shift() : storage[ id ].pop()
+			) as int;
 		}
 		
 		public function push( id:int, value:int ):void
