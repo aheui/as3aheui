@@ -17,6 +17,8 @@ package kr.studio321.aheui
 		public function Machine( codeSpace:Array )
 		{
 			this.codeSpace = codeSpace;
+			storage = new MachineStorage;
+			cursor = new Point;
 			init();
 		}
 		
