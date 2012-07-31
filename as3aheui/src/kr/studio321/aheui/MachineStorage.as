@@ -3,9 +3,11 @@ package kr.studio321.aheui
 	public class MachineStorage
 	{
 		private var storages:Array;
+		private var id:int;
 		
 		public function MachineStorage()
 		{
+			id = 0;
 			storages = [];
 			for( var i:int=0; i<28; ++i )
 				storages[ i ] = [];
@@ -13,11 +15,12 @@ package kr.studio321.aheui
 		
 		public function clear():void
 		{
+			id = 0;
 			for( var i:int=0; i<28; ++i )
 				storages[ i ].length = 0;
 		}
 		
-		public function pop( id:int ):int
+		public function pop():int
 		{
 			return (
 				( id == 21 )?
@@ -25,12 +28,12 @@ package kr.studio321.aheui
 			) as int;
 		}
 		
-		public function push( id:int, value:int ):void
+		public function push( value:int ):void
 		{
 			storages[ id ].push( value );
 		}
 		
-		public function duplicate( id:int ):void
+		public function duplicate():void
 		{
 			var storage:Array = storages[ id ];
 			if( id == 21 || id == 27 )
@@ -39,7 +42,7 @@ package kr.studio321.aheui
 				storage.push( storage[ storage.length-1 ] );
 		}
 		
-		public function swap( id:int ):void
+		public function swap():void
 		{
 			// TODO : 구현
 		}
