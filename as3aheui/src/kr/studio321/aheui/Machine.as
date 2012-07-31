@@ -24,7 +24,12 @@ package kr.studio321.aheui
 		
 		public function init():void
 		{
-			// TODO : 구현
+			input = output = "";
+			state = MachineState.RUNNING;
+			storage.clear();
+			direction = MachineDirection.VERTICAL;
+			speed = 1;
+			cursor.setTo( 0, 0 );
 		}
 		
 		public function step():void
