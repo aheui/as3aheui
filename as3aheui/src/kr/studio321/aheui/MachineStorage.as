@@ -20,6 +20,11 @@ package kr.studio321.aheui
 				storages[ i ].length = 0;
 		}
 		
+		public function select( id:int ):void
+		{
+			this.id = id;
+		}
+		
 		public function pop():int
 		{
 			return (
