@@ -49,7 +49,20 @@ package kr.studio321.aheui
 		
 		public function swap():void
 		{
-			// TODO : 구현
+			if( id == 21 || id == 27 )
+			{
+				var storage:Array = storages[ id ];
+				storage[ 0 ] ^= storage[ 1 ];
+				storage[ 1 ] ^= storage[ 0 ];
+				storage[ 0 ] ^= storage[ 1 ];
+				return;
+			} else {
+				var a:int, b:int;
+				a = pop();
+				b = pop();
+				push( a );
+				push( b );
+			}
 		}
 		
 	}
