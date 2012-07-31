@@ -32,7 +32,11 @@ package kr.studio321.aheui
 		
 		public function duplicate( id:int ):void
 		{
-			// TODO : 구현
+			var storage:Array = storages[ id ];
+			if( id == 21 || id == 27 )
+				storage.unshift( storage[ 0 ] );
+			else
+				storage.push( storage[ storage.length-1 ] );
 		}
 		
 		public function swap( id:int ):void
