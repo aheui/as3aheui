@@ -27,7 +27,7 @@ package kr.studio321.aheui
 		
 		public function push( id:int, value:int ):void
 		{
-			// TODO : 구현
+			storage[ id ].push( value );
 		}
 		
 		public function duplicate( id:int ):void
