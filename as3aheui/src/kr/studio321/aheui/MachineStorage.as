@@ -13,7 +13,8 @@ package kr.studio321.aheui
 		
 		public function clear():void
 		{
-			// TODO : 구현
+			for( var i:int=0; i<28; ++i )
+				storage[ i ].length = 0;
 		}
 		
 		public function pop( id:int ):void
