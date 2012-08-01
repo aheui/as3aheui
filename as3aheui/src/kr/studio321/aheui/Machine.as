@@ -4,6 +4,15 @@ package kr.studio321.aheui
 
 	public class Machine
 	{	
+		private static var strokeCounts:Array = [
+			0, 2, 4, 4, 2,
+			5, 5, 3, 5, 7,
+			9, 9, 7, 9, 9,
+			8, 4, 4, 6, 2,
+			4, 1, 3, 4, 3,
+			4, 4, 3
+		];
+		
 		public var input:String;
 		public var output:String;
 		public var state:int;
