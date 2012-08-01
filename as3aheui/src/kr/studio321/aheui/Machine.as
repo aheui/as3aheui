@@ -56,6 +56,11 @@ package kr.studio321.aheui
 			}
 			state = MachineState.RUNNING;
 			input = "";
+			if( !codeSpace || !codeSpace.length )
+			{
+				state = MachineState.STOPPED;
+				return;
+			}
 			var token:Token = codeSpace[ cursor.y ][ cursor.x ];
 			if( token )if( !token.isNothing )
 			{
