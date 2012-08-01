@@ -109,6 +109,7 @@ package
 		private function MOUSE_DOWN_start_bt( e:MouseEvent ):void
 		{
 			machine.codeSpace = Lexer.tokenize( code_tf.text );
+			code_tf.text = String( machine.codeSpace.length ); //멘붕
 			//machine.input =;
 			if( !hasEventListener( Event.ENTER_FRAME ) )
 				addEventListener( Event.ENTER_FRAME, ENTER_FRAME );
