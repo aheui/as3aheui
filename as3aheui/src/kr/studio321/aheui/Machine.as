@@ -38,7 +38,7 @@ package kr.studio321.aheui
 			storage.clear();
 			direction = MachineDirection.VERTICAL;
 			speed = 1;
-			cursor.setTo( 0, 0 );
+			cursor.x = cursor.y = 0;
 		}
 		
 		public function step():void
