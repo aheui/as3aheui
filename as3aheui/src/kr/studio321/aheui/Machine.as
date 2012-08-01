@@ -108,11 +108,9 @@ package kr.studio321.aheui
 				var a:int, b:int;
 				switch( token.initial )
 				{
-					// "ㅇ" group
 					case 18 :
 						state = MachineState.STOPPED;
 						return;
-						// "ㄷ" group
 					case 3 :
 						a = storage.pop();
 						b = storage.pop();
@@ -138,7 +136,6 @@ package kr.studio321.aheui
 						b = storage.pop();
 						storage.push( b%a );
 						break;
-					// "ㅁ" group
 					case 6 :
 						switch( token.under )
 						{
@@ -175,7 +172,6 @@ package kr.studio321.aheui
 					case 17 :
 						storage.swap();
 						break;
-					// "ㅅ" group
 					case 9 :
 						storage.select( token.under );
 						break;
