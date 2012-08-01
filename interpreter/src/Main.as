@@ -32,6 +32,16 @@ package
 				selectable = false;
 				x = y = 10;
 			}
+			with( input_tf )
+			{
+				defaultTextFormat = new TextFormat( "_typewriter", 13 );
+				width = height = 100;
+				type = TextFieldType.INPUT;
+				multiline = true;
+				border = true;
+				x = 10;
+				y = title.y+title.height+10;
+			}
 		}
 	}
 }
