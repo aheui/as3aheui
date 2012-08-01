@@ -25,6 +25,15 @@ package kr.studio321.aheui
 			this.id = id;
 		}
 		
+		public function move( id:int ):void
+		{
+			var _id:int = this.id;
+			var a:int = pop();
+			select( id );
+			push( a );
+			select( _id );
+		}
+		
 		public function pop():int
 		{
 			return (
