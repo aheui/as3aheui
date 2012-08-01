@@ -1,6 +1,7 @@
 package
 {
 	import flash.display.Sprite;
+	import flash.events.Event;
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFieldType;
@@ -31,7 +32,6 @@ package
 				autoSize = TextFieldAutoSize.LEFT;
 				text = "액션스크립트로 된 아희 처리기";
 				selectable = false;
-				x = y = 10;
 			}
 			with( input_tf )
 			{
@@ -39,8 +39,6 @@ package
 				type = TextFieldType.INPUT;
 				multiline = true;
 				border = true;
-				x = 10;
-				y = title.y+title.height+10;
 			}
 			with( initial_bt )
 			{
@@ -51,8 +49,6 @@ package
 				background = true;
 				backgroundColor = 0xEEEEEE;
 				selectable = false;
-				x = 10;
-				y = input_tf.y+input_tf.height+10;
 			}
 			with( start_bt )
 			{
@@ -63,8 +59,6 @@ package
 				background = true;
 				backgroundColor = 0xEEEEEE;
 				selectable = false;
-				x = initial_bt.x+initial_bt.width+10;
-				y = initial_bt.y;
 			}
 			with( stop_bt )
 			{
@@ -75,8 +69,6 @@ package
 				background = true;
 				backgroundColor = 0xEEEEEE;
 				selectable = false;
-				x = start_bt.x+start_bt.width+10;
-				y = initial_bt.y;
 			}
 			with( output_tf )
 			{
@@ -85,9 +77,47 @@ package
 				multiline = true;
 				border = true;
 				selectable = false;
+			}
+			setAlign();
+		}
+		
+		private function setAlign( e:Event = null ):void
+		{
+			var sw:int, sh:int;
+			sw = stage.stageWidth;
+			sh = stage.stageHeight;
+			with( title )
+				x = y = 10;
+			with( input_tf )
+			{
+				x = 10;
+				y = title.y+title.height+10;
+				width = sw-20;
+				height = ( sh-y )/2;
+			}
+			with( initial_bt )
+			{
+				x = 10;
+				y = input_tf.y+input_tf.height+10;
+			}
+			with( start_bt )
+			{
+				x = initial_bt.x+initial_bt.width+10;
+				y = initial_bt.y;
+			}
+			with( stop_bt )
+			{
+				x = start_bt.x+start_bt.width+10;
+				y = initial_bt.y;
+			}
+			with( output_tf )
+			{
 				x = 10;
 				y = initial_bt.y+initial_bt.height+10;
+				width = input_tf.width;
+				height = sh-y-10;
 			}
 		}
+		
 	}
 }
