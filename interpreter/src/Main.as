@@ -17,7 +17,12 @@ package
 		
 		public function Main()
 		{
-			
+			title = addChild( new TextField ) as TextField;
+			input_tf = addChild( new TextField ) as TextField;
+			output_tf = addChild( new TextField ) as TextField;
+			initial_bt = addChild( new TextField ) as TextField;
+			start_bt = addChild( new TextField ) as TextField;
+			stop_bt = addChild( new TextField ) as TextField;
 		}
 	}
 }
