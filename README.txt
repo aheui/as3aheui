@@ -21,4 +21,4 @@ while( machine.state )
 	machine.step();
 }
 
-trace( machine.output );
+trace( machine.output ); //Hello, world!
