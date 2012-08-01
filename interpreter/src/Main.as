@@ -34,13 +34,24 @@ package
 			}
 			with( input_tf )
 			{
-				defaultTextFormat = new TextFormat( "_typewriter", 13 );
+				defaultTextFormat = new TextFormat( "_typewriter", 12 );
 				width = height = 100;
 				type = TextFieldType.INPUT;
 				multiline = true;
 				border = true;
 				x = 10;
 				y = title.y+title.height+10;
+			}
+			with( output_tf )
+			{
+				defaultTextFormat = new TextFormat( "_typewriter", 12 );
+				width = height = 100;
+				type = TextFieldType.INPUT;
+				multiline = true;
+				border = true;
+				selectable = false;
+				x = 10;
+				y = input_tf.y+input_tf.height+10;
 			}
 		}
 	}
