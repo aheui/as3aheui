@@ -13,19 +13,18 @@ package kr.studio321.aheui
 			4, 4, 3
 		];
 		
+		public var codeSpace:Array;
 		public var input:String;
 		public var output:String;
 		public var state:int;
 		
-		private var codeSpace:Array;
 		private var storage:MachineStorage;
 		private var direction:Boolean;
 		private var speed:int;
 		private var cursor:Point;
 		
-		public function Machine( codeSpace:Array )
+		public function Machine()
 		{
-			this.codeSpace = codeSpace;
 			storage = new MachineStorage;
 			cursor = new Point;
 			init();
