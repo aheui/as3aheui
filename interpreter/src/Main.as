@@ -23,6 +23,15 @@ package
 			initial_bt = addChild( new TextField ) as TextField;
 			start_bt = addChild( new TextField ) as TextField;
 			stop_bt = addChild( new TextField ) as TextField;
+			
+			with( title )
+			{
+				defaultTextFormat = new TextFormat( null, 25, 0, true );
+				autoSize = TextFieldAutoSize.LEFT;
+				text = "액션스크립트로 된 아희 처리기";
+				selectable = false;
+				x = y = 10;
+			}
 		}
 	}
 }
