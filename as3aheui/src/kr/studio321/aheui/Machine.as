@@ -45,5 +45,25 @@ package kr.studio321.aheui
 		{
 			// TODO : 구현
 		}
+		
+		private function moveCursor():void
+		{
+			if( direction == MachineDirection.HORIZONTAL )
+			{
+				cursor.x += speed;
+				if( cursor.x < 0 )
+					cursor.x = codeSpace[ cursor.y ].length-1;
+				else if( cursor.x >= codeSpace[ cursor.y ].length )
+					cursor.x = 0;
+				return;
+			} else {
+				cursor.y += speed;
+				if( cursor.y < 0 )
+					cursor.y = codeSpace.length-1;
+				else if( cursor.y >= codeSpace.length )
+					cursor.y = 0;
+			}
+		}
+		
 	}
 }
