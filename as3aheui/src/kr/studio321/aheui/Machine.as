@@ -216,5 +216,14 @@ package kr.studio321.aheui
 			}
 		}
 		
+		public function toString():String
+		{
+			return "----- Machine Status -----\n" +
+				"cursor : " + cursor.x + ", " + cursor.y + "\n" +
+				"direction : " +
+				( ( direction == MachineDirection.HORIZONTAL )? "horizontal" : "vertical" ) +
+				"\nspeed : " + speed + "\n----- ----- ----- -----\n";
+		}
+		
 	}
 }
