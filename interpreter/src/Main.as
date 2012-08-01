@@ -5,6 +5,7 @@ package
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFieldType;
 	import flash.text.TextFormat;
+	import flash.text.TextFormatAlign;
 	
 	public class Main extends Sprite
 	{
@@ -35,23 +36,57 @@ package
 			with( input_tf )
 			{
 				defaultTextFormat = new TextFormat( "_typewriter", 12 );
-				width = height = 100;
 				type = TextFieldType.INPUT;
 				multiline = true;
 				border = true;
 				x = 10;
 				y = title.y+title.height+10;
 			}
+			with( initial_bt )
+			{
+				defaultTextFormat = new TextFormat( "_typewriter", 12, 0, null, null, null, null, null, TextFormatAlign.CENTER );
+				autoSize = TextFieldAutoSize.LEFT;
+				text = "초기화";
+				border = true;
+				background = true;
+				backgroundColor = 0xEEEEEE;
+				selectable = false;
+				x = 10;
+				y = input_tf.y+input_tf.height+10;
+			}
+			with( start_bt )
+			{
+				defaultTextFormat = new TextFormat( "_typewriter", 12, 0, null, null, null, null, null, TextFormatAlign.CENTER );
+				autoSize = TextFieldAutoSize.LEFT;
+				text = "실행";
+				border = true;
+				background = true;
+				backgroundColor = 0xEEEEEE;
+				selectable = false;
+				x = initial_bt.x+initial_bt.width+10;
+				y = initial_bt.y;
+			}
+			with( stop_bt )
+			{
+				defaultTextFormat = new TextFormat( "_typewriter", 12, 0, null, null, null, null, null, TextFormatAlign.CENTER );
+				autoSize = TextFieldAutoSize.LEFT;
+				text = "멈춤";
+				border = true;
+				background = true;
+				backgroundColor = 0xEEEEEE;
+				selectable = false;
+				x = start_bt.x+start_bt.width+10;
+				y = initial_bt.y;
+			}
 			with( output_tf )
 			{
 				defaultTextFormat = new TextFormat( "_typewriter", 12 );
-				width = height = 100;
 				type = TextFieldType.INPUT;
 				multiline = true;
 				border = true;
 				selectable = false;
 				x = 10;
-				y = input_tf.y+input_tf.height+10;
+				y = initial_bt.y+initial_bt.height+10;
 			}
 		}
 	}
