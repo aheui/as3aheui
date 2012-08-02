@@ -4,7 +4,7 @@ package kr.studio321.aheui
 	{
 		public static function tokenize( code:String ):Array
 		{
-			var codeLines:Array = code.replace( "\r\n", "\n" ).split( "\n" );
+			var codeLines:Array = code.replace( /\r\n|\r/g, "\n" ).split( "\n" );
 			var code:String;
 			var charCode:int;
 			var initial:int, vowel:int, under:int;
