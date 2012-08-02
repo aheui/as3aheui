@@ -34,12 +34,10 @@ package kr.studio321.aheui
 			select( _id );
 		}
 		
-		public function pop():int
+		public function pop():Number
 		{
-			return (
-				( id == 21 )?
-				storages[ id ].shift() : storages[ id ].pop()
-			) as int;
+			return ( id == 21 )?
+				storages[ id ].shift() : storages[ id ].pop();
 		}
 		
 		public function push( value:Number ):void
