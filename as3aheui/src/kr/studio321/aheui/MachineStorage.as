@@ -42,7 +42,7 @@ package kr.studio321.aheui
 			) as int;
 		}
 		
-		public function push( value:int ):void
+		public function push( value:Number ):void
 		{
 			storages[ id ].push( value );
 		}
