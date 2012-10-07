@@ -24,13 +24,9 @@ package kr.studio321.aheui
 					charCode = code.charCodeAt()-44032;
 					if( charCode>11171 || charCode<0 )
 						continue;
-					initial = int( charCode/588 );
-					vowel = int( charCode%588/28 );
+					initial = charCode/588;
+					vowel = charCode%588/28;
 					under = charCode%588%28;
-					initialChar = String.fromCharCode( 4352+initial );
-					vowelChar = String.fromCharCode( 44032 + initial*588 + vowel*28 );
-					if( initialChar == vowelChar )
-						continue;
 					codeLine[ j ].isNothing = false;
 					codeLine[ j ].initial = initial;
 					codeLine[ j ].vowel = vowel;
